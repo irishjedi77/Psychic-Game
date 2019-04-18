@@ -24,7 +24,7 @@ function countGuessesLeft() {
 }
 
 function farUserGuesses() {
-    document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letterUser.join( "," );
+    document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letterUser.join( ", " );
 }
 
 
@@ -32,7 +32,7 @@ function farUserGuesses() {
 var restart = function () {
     guessesLeft = 9;
     letterUser = [];
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
 //This function is run when the user presses a key
@@ -40,9 +40,11 @@ document.onkeyup = function (event) {
     if (guessesLeft > -1) {
         guessesLeft--;
 
-        var letterUser = event.key.toLowerCase();
+        var letter = event.key.toLowerCase();
+        letterUser.push(letter);
+        farUserGuesses();
 
-        if (letterUser === computerGuess) {
+        if (letter === computerGuess) {
             document.querySelector("#wins").innerHTML = "Wins: " + (wins + 1);
             restart();
         }
