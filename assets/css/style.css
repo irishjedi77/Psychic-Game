@@ -1,0 +1,40 @@
+body {
+    background: url("../images/crystal.png")
+}
+
+.container {
+    color: rgb(124, 248, 207);
+    margin-left: 420px;
+    text-align: left;
+    font-size: large;
+    margin-top: 110px;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: x-large;
+}
+
+.container2 {
+    color: rgb(124, 248, 207);
+    text-align: center;
+    font-size: small;
+    margin-top: 450px;
+    font-family: 'Black And White Picture', sans-serif;
+}
+
+h1 {
+    color: rgb(124, 248, 207);
+    text-align: center;
+    margin-left: 25px;
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 65pt;
+}
+
+span {
+    font-family: 'Black And White Picture', sans-serif;
+    text-align: center; 
+}
+
+#footer {
+    margin-bottom: -100px;
+    margin-top: 1000px;
+    text-align: center;
+}
